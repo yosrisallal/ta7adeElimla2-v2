@@ -15,14 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
@@ -50,28 +43,7 @@ public class level1_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                AdView adView = new AdView(level1_Activity.this);
-
-                adView.setAdSize(AdSize.BANNER);
-
-                adView.setAdUnitId("ca-app-pub-3623255915762740/63325387051");
-            }
-        });
-
-
-
-
-
-
-
-
-
         age=getIntent().getIntExtra("year",0);
-
         //initializing
         time_clock_card=findViewById(R.id.time_clock_card);
         reponse1=findViewById(R.id.reponse1);
@@ -614,9 +586,6 @@ if((Questions.size())>0){
      }
      qnum++;
      Question_number_tv.setText(qnum+"/10");
-
-
-
 
     }
 }

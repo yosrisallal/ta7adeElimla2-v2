@@ -52,23 +52,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         i1=findViewById(R.id.logo);
         Animation a1= AnimationUtils.loadAnimation(this, R.anim.logo_mainactivity);
         a1.setDuration(2000);
         i1.setAnimation(a1);
         sqldb=new Mydatabase(MainActivity.this);
-
-
         db=FirebaseFirestore.getInstance();
         isConnectingToInternet(MainActivity.this);
-
-
-
-
     }
-
 
     public void eventchangelistennerAGE12(){
 

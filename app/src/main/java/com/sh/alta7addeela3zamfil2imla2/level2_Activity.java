@@ -12,17 +12,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
@@ -50,23 +42,6 @@ public class level2_Activity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                AdView adView = new AdView(level2_Activity.this);
-
-                adView.setAdSize(AdSize.BANNER);
-
-                adView.setAdUnitId("ca-app-pub-3623255915762740/63325387051");
-            }
-        });
-
-
-
-
-
-
         strings_for_remove =getIntent().getStringArrayListExtra("strings");
         age=getIntent().getIntExtra("year",0);
         MARKS=getIntent().getIntExtra("MARKS",0);
@@ -678,10 +653,6 @@ public class level2_Activity extends AppCompatActivity{
         }
         qnum++;
         Question_number_tv.setText((qnum+10)+"/20");
-
-
-
-
     }
 }
 

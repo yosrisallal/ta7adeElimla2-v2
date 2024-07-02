@@ -55,7 +55,7 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/dialog"
-        android:backgroundTint="#D8DEFB"
+        android:backgroundTint="@color/background"
         android:fontFamily="@font/arabic"
         android:gravity="center"
         android:text="جرِّب التَّحدِّي مرَّة أخرى"

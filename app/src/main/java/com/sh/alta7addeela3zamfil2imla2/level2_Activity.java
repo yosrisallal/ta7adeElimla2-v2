@@ -95,44 +95,6 @@ public class level2_Activity extends AppCompatActivity{
         //set Questions to Arraylist needed for the age
         if(age>0){
             Questions= mydatabase.getquestionwhereageequalto(age);
-            switch (age) {
-                case 13:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(12));
-                    break;
-                case 14:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    break;
-                case 15:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(14));
-                    break;
-                case 16:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(14));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(15));
-                    break;
-                case 17:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(14));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(15));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(16));
-                    break;
-                case 18:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(14));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(15));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(16));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(17));
-                    break;
-                case 19:
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(13));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(14));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(15));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(16));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(17));
-                    Questions.addAll(mydatabase.getquestionwhereageequalto(18));
-                    break;
-            }
         }
 
 
@@ -528,128 +490,31 @@ public class level2_Activity extends AppCompatActivity{
         Questions.remove(q1);
         Question_tv.setText(q1.getQuestion());
         ANSWERS=new ArrayList<>();
-
-        switch(q1.getNumber()){
-
-            case 2:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                reponse2.setText(ANSWERS.get(0));
-                ANSWERS.remove(0);
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.INVISIBLE);
-                reponse4.setVisibility(View.INVISIBLE);
-                lamp.setVisibility(View.INVISIBLE);
-                break;
-
-            case 22:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                reponse2.setText(ANSWERS.get(0));
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.INVISIBLE);
-                reponse4.setVisibility(View.INVISIBLE);
-                lamp.setVisibility(View.VISIBLE);
-                break;
-
-            case 3:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                ANSWERS.add(q1.getFalse2());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse2.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                reponse3.setText(ANSWERS.get(0));
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.VISIBLE);
-                reponse4.setVisibility(View.INVISIBLE);
-                lamp.setVisibility(View.INVISIBLE);
-                break;
-
-            case 32:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                ANSWERS.add(q1.getFalse2());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse2.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                reponse3.setText(ANSWERS.get(0));
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.VISIBLE);
-                reponse4.setVisibility(View.INVISIBLE);
-                lamp.setVisibility(View.VISIBLE);
-                break;
-
-            case 4:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                ANSWERS.add(q1.getFalse2());
-                ANSWERS.add(q1.getFalse3());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse2.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse3.setText(ANSWERS.get(random_integer1));
-                reponse4.setText(ANSWERS.get(0));
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.VISIBLE);
-                reponse4.setVisibility(View.VISIBLE);
-                lamp.setVisibility(View.INVISIBLE);
-                break;
-
-            case 42:
-                ANSWERS.add(q1.getRight());
-                ANSWERS.add(q1.getFalse1());
-                ANSWERS.add(q1.getFalse2());
-                ANSWERS.add(q1.getFalse3());
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse1.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse2.setText(ANSWERS.get(random_integer1));
-                ANSWERS.remove(random_integer1);
-                high=ANSWERS.size();
-                random_integer1= rand.nextInt((high-low)+low);
-                reponse3.setText(ANSWERS.get(random_integer1));
-                reponse4.setText(ANSWERS.get(0));
-                reponse1.setVisibility(View.VISIBLE);
-                reponse2.setVisibility(View.VISIBLE);
-                reponse3.setVisibility(View.VISIBLE);
-                reponse4.setVisibility(View.VISIBLE);
-                lamp.setVisibility(View.VISIBLE);
-                break;
-
-
+        ANSWERS.add(q1.getRight());
+        ANSWERS.add(q1.getFalse1());
+        ANSWERS.add(q1.getFalse2());
+        ANSWERS.add(q1.getFalse3());
+        high=ANSWERS.size();
+        random_integer1= rand.nextInt((high-low)+low);
+        reponse1.setText(ANSWERS.get(random_integer1));
+        ANSWERS.remove(random_integer1);
+        high=ANSWERS.size();
+        random_integer1= rand.nextInt((high-low)+low);
+        reponse2.setText(ANSWERS.get(random_integer1));
+        ANSWERS.remove(random_integer1);
+        high=ANSWERS.size();
+        random_integer1= rand.nextInt((high-low)+low);
+        reponse3.setText(ANSWERS.get(random_integer1));
+        reponse4.setText(ANSWERS.get(0));
+        reponse1.setVisibility(View.VISIBLE);
+        reponse2.setVisibility(View.VISIBLE);
+        reponse3.setVisibility(View.VISIBLE);
+        reponse4.setVisibility(View.VISIBLE);
+        lamp.setVisibility(View.VISIBLE);
+        if(q1.getLamp()!=null && !(q1.getLamp().isEmpty())){
+            lamp.setVisibility(View.VISIBLE);
+        }else{
+            lamp.setVisibility(View.GONE);
         }
         qnum++;
         Question_number_tv.setText((qnum+10)+"/20");
